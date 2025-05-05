@@ -1,0 +1,305 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, p {
+  color: #343a40;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .navbar-brand {
+  color: #F0F8FF;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.navbar .nav-link:hover {
+  background-color: #F0F8FF;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: #F0F8FF;
+  font-size: 24px;
+}
+
+.navbar-text {
+  color: #F0F8FF;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 123, 255, 0.95);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar-toggler {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+
+/* Carousel */
+.carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Titles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-transform: uppercase;
+}
+
+/* Travelling Places Section */
+.cb {
+  padding: 50px 0;
+
+}
+
+.c1 {
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.c1:hover {
+  transform: translateY(-5px);
+}
+
+.c1 img {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.c1 img:hover {
+  transform: scale(1.05);
+}
+
+/* For Travel Pros Section */
+.main21 {
+  padding: 50px 0;
+}
+
+.main2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main12 {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  max-width: 250px;
+  transition: transform 0.3s;
+}
+
+.main12:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mumbai Places Section */
+.mumbai {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.box1{
+display:flex;}
+.mum_cls {
+  border-radius: 8px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.b2 {
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.b2:hover {
+  transform: translateY(-5px);
+}
+
+/* Popular Domestic Airlines Section */
+.air {
+  padding: 50px 0;
+}
+
+.a1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.a2 {
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.a2:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+  .main2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main12 {
+    max-width: 100%;
+  }
+  .carousel-inner img {
+    height: 400px;
+  }
+}
+#ban{
+display:none;
+}
+@media(max-width:768px){
+#ban{
+display:block;
+}
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .c1 img {
+    height: 120px;
+    width: 180px;
+  }
+  .mum_cls {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c1 img {
+    height: 100px;
+    width: 150px;
+  }
+  .main12 h2 {
+    font-size: 1rem;
+  }
+  .mum_cls {
+    height: 200px;
+  }
+  .carousel-inner img {
+    height: 300px;
+  }
+}
+.more-text{
+    display: none;}

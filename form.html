@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- <div class='ripple-background'>
+        <div class='circle xxlarge shade1'></div>
+        <div class='circle xlarge shade2'></div>
+        <div class='circle large shade3'></div>
+        <div class='circle mediun shade4'></div>
+        <div class='circle small shade5'></div>
+      </div> -->
+    <!-- As a heading -->
+    <div class="top_nav">
+        <div class="container top_nav_container">
+            <div class="top_nav_wrapper">
+                <h1 class="title">✈ Flight Fare Prediction</h1>
+            </div>
+        </div>
+    </div>
+    <!-- nav bar -->
+    <nav class="nav">
+        <div class="container nav_container">
+            <a href="" class="nav_logo">EXCLUSIVE</a>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+                <li class="nav_item"><a href="./predict.html" class="nav_link">Offer</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">Customer Service</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">About</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="one">
+        <div class="container">
+            <form action="\predict" method="post" id="flightForm">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Departure Date</h5>
+                                <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title design">Arrival Date</h5>
+                                <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title design">Source</h5>
+                                <select name="Source" id="Source" required="required" class="form-control">
+                                     <option value="Delhi">---Source---</option>
+                                    <option value="Delhi">New Delhi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Chennai">Chennai</option>
+                                     <option value="Delhi">Banglore</option>
+                                    <option value="Kolkata">Cochin</option>
+                                    <option value="Mumbai">Hyderabad</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title design">Destination</h5>
+                                <select name="Destination" id="Destination" required="required" class="form-control">
+                                               <option value="Delhi">---Destination---</option>
+                                    <option value="Kolkata">Cochin</option>
+                                     <option value="Mumbai">Mumbai</option>
+                                    <option value="Delhi">New Delhi</option>
+                                      <option value="Delhi">Banglore</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Mumbai">Hyderabad</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title design">Total Stops</h5>
+                                <select name="stops" required="required" class="form-control">
+                                    <option value="0">Non-Stop</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title design">Select Airline</h5>
+                                <select name="airline" id="airline" required="required" class="form-control">
+                                    <option value="Jet Airways">Jet Airways</option>
+                                    <option value="IndiGo">IndiGo</option>
+                                    <option value="Air India">Air India</option>
+                                    <option value="Multiple carriers">Multiple carriers</option>
+                                    <option value="SpiceJet">SpiceJet</option>
+                                    <option value="Vistara">Vistara</option>
+                                    <option value="Air Asia">Air Asia</option>
+                                    <option value="GoAir">GoAir</option>
+                                    <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                                    <option value="Jet Airways Business">Jet Airways Business</option>
+                                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                                    <option value="Trujet">Trujet</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <input type="submit" value="Submit" class="sub_btn">
+                    <!-- <input type="button" value="Reset" class="re_btn" onclick="resetForm()"> -->
+                </center>
+            </form>
+            <center>
+                <h3 class="predict_value">{{ prediction_text }}</h3>
+                <p>©2025 Priyadharshini</p>
+            </center>
+        </div>
+    </div>
+    <script>
+        function resetForm() {
+            document.getElementById('flightForm').reset();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

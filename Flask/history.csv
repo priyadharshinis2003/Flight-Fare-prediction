@@ -1,0 +1,11 @@
+airline,source,destination,stops,predicted_price
+Jet Airways,Mumbai,Delhi,0,3994.02
+Jet Airways,Kolkata,Delhi,0,6171.94
+Multiple carriers,Mumbai,Delhi,1,5953.57
+Air Asia,Mumbai,Delhi,2,6692.67
+Air India,Kolkata,Mumbai,1,3817.52
+Air India,Delhi,Mumbai,0,6621.07
+Air India,Delhi,Mumbai,0,6658.87
+Multiple carriers,Kolkata,Delhi,0,5002.94
+Jet Airways,Mumbai,Delhi,1,3590.53
+SpiceJet,Mumbai,Delhi,3,39681.55

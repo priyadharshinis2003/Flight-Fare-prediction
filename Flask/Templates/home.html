@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image" href="{{ url_for('static', filename='11.jpg') }}">
+    <title>flight price prediction</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-links">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/form">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Result Page</a>
+                </li>
+            </ul>
+        </div>
+        <span class="navbar-text">
+            Flight Fare Prediction
+        </span>
+    </div>
+</nav>
+
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://pbs.twimg.com/media/F3LWCxzaEAAmO8J?format=jpg&name=large"
+          class="d-block cr "   alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.iadb.in/wp-content/uploads/2024/01/wp6767658.webp"
+          class="d-block cr"  alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://thedailyguardian.com/wp-content/uploads/2024/04/VISTARA-AIRLINES.png"
+          class="d-block cr " alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- container -->
+  <div class="container text-center cb  ">
+    <div class="row mt-5 mb-5 c ">
+      <h1>Travelling places</h1>
+      <div class="col c1">
+        <img
+          src="https://media.istockphoto.com/id/1215791152/photo/moonrise-over-south-central-mumbai-the-financial-capital-of-india-showing-a-glittering.jpg?s=612x612&w=0&k=20&c=vJB6RQMWZ4D9pZ2Kva7QLLBbcAf8SGrRZ-ehCeR76zw="
+          height="150" width="200" alt="">
+        <h2>Mumbai</h2>
+        <p>2h 25m, direct</p>
+
+      </div>
+      <div class="col c1">
+        <img src="https://t4.ftcdn.net/jpg/03/60/89/09/360_F_360890991_Ykybj5JO5HYBaqWeROz9cR2jWXN8HZxf.jpg"
+          height="150" width="200" alt="">
+        <h2>Hyderabad</h2>
+        <p>1h 30m, direct</p>
+
+      </div>
+      <div class="col c1">
+        <img
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/57/ed/bf/colombo-with-berei-lake.jpg?w=1000&h=1000&s=1"
+          height="150" width="200" alt="">
+        <h2>colombo</h2>
+        <p>1h, direct</p>
+
+      </div>
+      <div class="col c1">
+        <img
+          src="https://cdn-imgix.headout.com/mircobrands-content/image/1665b43d70b1cd42474d48558387eb8f-david-rodrigo-Fr6zexbmjmc-unsplash.jpg"
+          height="150" width="200" alt="">
+        <h2>Dubai</h2>
+        <p>4h 35m, direct</p>
+
+      </div>
+      <div class="col c1" id="ban">
+        <img src="https://cdn.britannica.com/91/189791-050-4CE6663A/Bangalore-Palace-Bengaluru-India.jpg" height="150"
+          width="200" alt="">
+        <h2>Banglore</h2>
+        <p>4h 35m, direct</p>
+      </div>
+      <div class="col c1">
+        <img src=" https://upload.wikimedia.org/wikipedia/commons/3/32/Chennai_Central.jpg" height="150" width="200"
+          alt="">
+        <h2>Chennai</h2>
+        <p>4h 35m, direct</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- container end -->
+
+
+
+
+
+  <div class="d-flex align-content-around flex-wrap">
+
+  </div>
+  <div class="main21">
+    <h1>For travel pros</h1>
+    <div class="main2">
+
+      <div class="main12">
+        <h2>Best Time </h2>
+        <p> To Travelling the places</p>
+        <img
+          src="https://media.istockphoto.com/id/1325525862/photo/clock-dispersing-in-hand.jpg?s=612x612&w=0&k=20&c=k9C_h2ESz0DOi7hRFk2C_zNm5z9B3fSImXbqss09F9s="
+          height="120 " width="230" alt="">
+      </div>
+      <div class="main12">
+        <h2>Explore</h2>
+        <p>See Destination on your Budget</p>
+        <img
+          src="https://media.istockphoto.com/id/658469740/photo/making-an-on-line-reservation.jpg?s=612x612&w=0&k=20&c=8gR38gHrnK1ddrFt0vXOlLco3iySSPwb1j7szzUFwtY="
+          height="120 " width="230" alt="">
+      </div>
+      <div class="main12">
+        <h2>Cost Savings</h2>
+        <p>Know When prices Change</p>
+        <img
+          src="https://c8.alamy.com/comp/2H8E8DP/business-woman-at-airport-silhouette-of-a-passenger-2H8E8DP.jpg"
+          height="120 " width="230" alt="">
+      </div>
+      <div class="main12">
+        <h2>Flight Tracker</h2>
+        <p>See real-time delays</p>
+        <img
+          src="https://img.freepik.com/premium-vector/showing-time-his-wristwatch-modern-watch-with-index-finger-pointing-his-other-hand-illustration_869472-38.jpg"
+          height="120 " width="230" alt="">
+      </div>
+      <div class="main12">
+        <h2>Trips</h2>
+        <p>keep all your plans in one place</p>
+        <img
+          src="https://www.travelandleisure.com/thmb/7G4EcsXi89eRdZ362CAcAZFWK38=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/first-flight-PASSENGER0117-54b6a28cad6d464d9b9a6ead2ce162cb.jpg"
+          height="120 " width="230" alt="">
+      </div>
+
+    </div>
+  </div>
+  <!--mumbai places-->
+  <div class="container  b">
+
+<!--      hyderabad places-->
+    <div class=" b">
+  <div class="Hyderabad">
+      <h2 style="text-align:left;">Hyderabad</h2>
+  </div>
+  <div class="row b1">
+      <div class="col b2">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2023/10/Golkonda-Fort-min.jpg:cf-webp:w-848:h-551" class="mum_cls" alt="Card image cap">
+          <h3 style="font-size:23px">Golconda Fort</h3>
+          <p style="text-align: justify;"   >  <span  class="more-text" style="font-size: small;">
+              Golconda Fort is a majestic fortress known for its rich history and acoustic wonders. It was the capital of medieval Golconda Sultanate.
+           Location: Khair Complex, Ibrahim Bagh
+                  <br>Timings: 09:00 AM to 05:30 PM; every day
+                  <br>Attractions: Clapping Hands Echo Point, Secret Passages, and Light & Sound Show.
+              </span>
+          </p>
+          <button class="read-more-btn btn btn-outline-success">Read More</button>
+      </div>
+
+      <div class="col b2">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Ramoji-Film-City.jpg:cf-webp:w-848:h-551" class="mum_cls" alt="Card image cap">
+          <h3>Ramoji Film City</h3>
+          <p style="text-align: justify;">  <span class="more-text" style="font-size: small;">
+              Ramoji Film City is one of the world’s largest film studio complexes, spread across 2000 acres. It's a famous tourist attraction for  lovers.
+            Location: Anaspur Village, Hayathnagar Mandal
+                  <br>Timings: 09:00 AM to 05:30 PM; every day
+                  <br>Attractions: Film Sets, Adventure Park, and Live Shows.
+              </span>
+          </p>
+          <button class="read-more-btn btn btn-outline-success">Read More</button>
+      </div>
+
+      <div class="col b2">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2023/01/Wonderla-1-min-min.jpg:cf-webp:w-848:h-551" class="mum_cls" alt="Card image cap">
+          <h3>Wonderla</h3>
+          <p style="text-align: justify;"  >  <span  class="more-text" style="font-size: small;">
+              Wonderla is a top-rated amusement park with thrilling rides and water slides, making it a perfect destination for fun and adventure.
+              Location: Outer Ring Road, Exit No 13, Ravirala
+                  <br>Timings: 11:00 AM to 07:00 PM (Peak Season & Normal Season Weekends/Holidays)
+                  <br>Attractions: High-Thrill Rides, Wave Pools, and VR Coaster.
+              </span>
+          </p>
+          <button class="read-more-btn btn btn-outline">Read More</button>
+      </div>
+
+      <div class="col b2">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/05/Lumbini-Park.jpg:cf-webp:w-848:h-551" class="mum_cls" alt="Card image cap">
+          <h3>Lumbini Park</h3>
+          <p style="text-align: justify;"  >  <span  class="more-text" style="font-size: small;">
+              Lumbini Park is a scenic lakeside park with a musical fountain and boat rides offering a beautiful view of the Hussain Sagar Lake.
+           Location: Opposite Secretariat New Gate, Khairatabad
+                  <br>Timings: 09:00 AM to 09:00 PM; every day
+                  <br>Attractions: Laser Show, Boat Ride, and Buddha Statue.
+              </span>
+          </p>
+          <button class="read-more-btn btn btn-outline-success">Read More</button>
+      </div>
+
+      <div class="col b2">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2018/10/Eat-Street-Hyderabad.jpg:cf-webp:w-848:h-551" class="mum_cls" alt="Card image cap">
+          <h3>Eat Street</h3>
+          <p style="text-align: justify;" >  <span  class="more-text" style="font-size: small;">
+              Eat Street is a famous lakeside food court offering a variety of delicious street food with a beautiful view of Hussain Sagar Lake.
+             Location: Necklace Road, Hussain Sagar, Khairatabad
+                  <br>Timings: 08:00 AM to 10:30 PM; every day
+                  <br>Specialties: Street Food, Chaat, and Ice Cream.
+              </span>
+          </p>
+          <button class="read-more-btn btn btn-outline-success">Read More</button>
+      </div>
+  </div>
+</div>
+
+
+  </div>
+  <!--    end of this mumbai-->
+
+
+
+ <!-- Popular Domestic Airlines start -->
+  <div class="container air">
+    <h1>Popular Domestic Airlines</h1>
+    <div class="row a1">
+      <div class="col a2">
+        <img src="https://images.ixigo.com/img/common-resources/airline-new/6E.png" height="50" width="50" alt="">
+        <p>IndiGo</p>
+      </div>
+      <div class="col a2">
+        <img src="https://images.ixigo.com/img/common-resources/airline-new/AI.png" height="50" width="50" alt="">
+        <p>Air India </p>
+      </div>
+
+      <div class="col a2">
+        <img src="https://images.ixigo.com/img/common-resources/airline-new/SG.png" height="50" width="50" alt="">
+        <p> SpiceJet </p>
+      </div>
+      <div class="col a2 ">
+        <img
+          src="https://cdn.prod.website-files.com/5efefaa8fe53d9f878615f8c/5f3272fed0a119b6fb24f3b3_Arena-Aviation-Capital-Plane-Tail-AirAsia-Zest.png"
+          height="50" width="50" alt="">
+        <p> Air Asia</p>
+      </div>
+      <div class="col-2 a2">
+        <img src="https://img.freepik.com/free-vector/airplane-with-circle-flight-path_78370-4778.jpg" height="50"
+          width="50" alt="">
+        <p>Multiple carriers</p>
+      </div>
+      <div class="col a2">
+        <img src="https://airhex.com/images/airline-logos/tail/vistara.png" height="50" width="50" alt="">
+        <p> Vistara </p>
+      </div>
+      <div class="col a2">
+        <img src="https://seekvectors.com/files/download/GoAir%20Airlines-01.svg" height="50" width="50" alt="">
+        <p>GoAir</p>
+      </div>
+      <div class="col a2 "> <img src="https://airhex.com/images/airline-logos/tail/trujet.png" height="50" width="50"
+          alt="">
+        <p> Trujet </p>
+      </div>
+      <div class="col a2 ">
+        <img
+          src="https://images.pnrstatusenquiry.co.in/blog/1666446442_5f3272f0a1e9a14190e6aed2_Arena-Aviation-Capital-Plane-Tail-Jet-Airways.png"
+          height="50" width="50" alt="">
+        <p> Jet Airways</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script>
+    document.querySelectorAll(".read-more-btn").forEach(button => {
+        button.addEventListener("click", function() {
+            let content = this.previousElementSibling.querySelectorAll(".more-text");
+
+            content.forEach(span => {
+                if (span.style.display === "none" || span.style.display === "") {
+                    span.style.display = "inline";
+                } else {
+                    span.style.display = "none";
+                }
+            });
+
+            this.textContent = this.textContent === "Read More" ? "Read Less" : "Read More";
+        });
+});
+</script>
+</html>

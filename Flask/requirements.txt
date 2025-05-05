@@ -1,0 +1,5 @@
+amadeus
+flask
+flask-cors
+pandas
+scikit-learn
